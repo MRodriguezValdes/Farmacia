@@ -598,7 +598,7 @@ public class Doctor extends Person {
   rhttp.send();
 }
  ```
- ### JSON Pacientes :
+### JSON Pacientes :
  ```java
  function requestForListPatients() {
   let rhttp = new XMLHttpRequest();
@@ -637,4 +637,31 @@ public class Doctor extends Person {
   rhttp.send();
 }
  ```
- # Pruebas Funcionales :
+# Pruebas Funcionales :
+
+# Loguin
+
+ ![](img/LoginDoctor.png)
+
+# Pacientes
+
+![](img/Pacientes.png)
+
+# Alta
+
+![](img/alta.png)
+
+# Alta Paciente
+
+![](img/altaPaciente.png)
+![](img/altaPaciente2.png)
+
+# Alta Xip
+
+![](img/altaXip.png)
+![](img/altaXip2.png)
+![](img/altaXipCompletada.png)
+
+# Aparece Manolo en tiempo real
+
+![](img/ApareceManolo.png)
