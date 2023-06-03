@@ -187,6 +187,7 @@ function requestForListMedicine() {
     if (this.readyState == 4 && this.status == 200) {
       let data = JSON.parse(rhttp.responseText);
       let selectElement = document.getElementById("idMedicine");
+      selectElement.innerHTML = ""; // empty select 
       console.log(data[3].name);
       for (let i = 0; i < data.length; i++) {
         let option = document.createElement("option");
@@ -223,6 +224,7 @@ function requestForListPatients() {
     if (this.readyState == 4 && this.status == 200) {
       let data = JSON.parse(rhttp.responseText);
       let selectElement = document.getElementById("patientMail");
+      selectElement.innerHTML = ""; // empty select 
       console.log(data[3]);
       for (let i = 0; i < data.length; i++) {
         let option = document.createElement("option");
