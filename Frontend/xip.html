@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="requestForData()">
+    <div id="formulario">
+      <label for="idXip">ID XIP: </label>
+      <input type="text" id="idXip" name="idXip" /> <br />
+
+      <select name="idMedicine" id="idMedicine"></select
+      ><br />
+
+      <select name="patientMail" id="patientMail"></select
+      ><br />
+
+      <input type="date" name="finalDate" id="finalDate" /><br />
+
+      <button onclick="altaXip()">submit</button>
+      <button onclick="location.href='gestion.html'">GO BACK</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

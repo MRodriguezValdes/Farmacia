@@ -1,0 +1,128 @@
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilos para las celdas encabezado */
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para las celdas normales */
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Estilos alternativos para filas impares */
+table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para resaltar cuando se pasa el cursor por encima */
+table tr:hover {
+  background-color: #e5e5e5;
+}
+
+/* Estilos para la primera columna (opcional) */
+table td:first-child {
+  font-weight: bold;
+}
+
+#formulario {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"],
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("arrow-icon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-image: url("lock-icon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 18px;
+  padding-right: 35px;
+}
