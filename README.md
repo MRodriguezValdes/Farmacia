@@ -1,12 +1,18 @@
  # Proyecto Final
  # Titulo : Farmacia
  # Descripcion:
+
  Con el Proyecto el objetivo perseguido es simular el comportamiento de una web que permita :
- 1- Loguearse a un doctor
- 2- Registrarse a un doctor
- 3- El doctor podra dar de alta un xip o un paciente
- 4- Debemos tener una tabla en tiempo real donde se muestren los pacientes de el doctor que se encuentra logueado , asi como el medicamento recetado,etc
- 5- En el alta de xip debemos recibir como json del backend un json con todos los pacientes y medicamentos  disponibles en la base de datos .
+
+ 1. Loguearse a un doctor
+
+ 2. Registrarse a un doctor
+
+ 3. El doctor podra dar de alta un xip o un paciente
+
+ 4. Debemos tener una tabla en tiempo real donde se muestren los pacientes de el doctor que se encuentra logueado , asi como el medicamento recetado,etc
+
+ 5. En el alta de xip debemos recibir como json del backend un json con todos los pacientes y medicamentos  disponibles en la base de datos .
  De forma resumida los aspectos a cumplir son los planteados anteriormente . Es importante de recordar que el backend tambien lo crearemos nosotros, es un proyecto Full Stack.
 
  # Solucion de los requerimientos :
@@ -497,7 +503,42 @@ public class Doctor extends Person {
       let data = ehttp.responseText;
       if (data == "ok") {
         document.getElementById("idXip").value = "";
-        document.getElementById("idMedicine").value = "";
+        document.getElementById("idMedicine").value = "";function requestForListPatients() {
+  let rhttp = new XMLHttpRequest();
+  let mail = sessionStorage.getItem("mail");
+  let session = sessionStorage.getItem("session");
+  console.log(mail);
+  console.log(session);
+  rhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      let data = JSON.parse(rhttp.responseText);
+      let selectElement = document.getElementById("patientMail");
+      selectElement.innerHTML = ""; // empty select
+      console.log(data[3]);
+      for (let i = 0; i < data.length; i++) {
+        let option = document.createElement("option");
+        option.value = data[i];
+        option.textContent = data[i];
+        selectElement.appendChild(option);
+      }
+      console.log(data);
+    }
+  };
+
+  let url =
+    "email=" +
+    encodeURIComponent(mail) +
+    "&session=" +
+    encodeURIComponent(session);
+  console.log(url);
+
+  rhttp.open(
+    "GET",
+    "http://localhost:3001/Farmacia_war_exploded/patient?" + url,
+    true
+  );
+  rhttp.send();
+}
         document.getElementById("patientMail").value = "";
         finalDate = document.getElementById("finalDate").value = "";
         alert("Ha sido dado de alta");
