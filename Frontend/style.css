@@ -49,7 +49,11 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+select,
+input[type="date"],
+input[type="password"]
+{
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -70,17 +74,6 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-input[type="text"],
-select,
-input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
 }
 
 select {
@@ -113,16 +106,4 @@ input[type="password"]:focus {
   outline: none;
   border-color: #4caf50;
 }
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  background-image: url("lock-icon.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 18px;
-  padding-right: 35px;
-}
+
